@@ -1,0 +1,20 @@
+---
+abstract: 'Any::Moose Support For Module::Install'
+author:
+  - 'Daisuke Maki C<< daisuke@endeworks.jp >>'
+distribution_type: module
+generated_by: 'Module::Install version 0.80'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Module-Install-Any-Moose
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  Module::Install: 0.72
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.00001
