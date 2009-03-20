@@ -17,4 +17,4 @@ requires:
   Module::Install: 0.72
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.00001
+version: 0.00002
