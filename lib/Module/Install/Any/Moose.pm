@@ -5,7 +5,7 @@ use Module::Install::Base;
 
 use vars qw($VERSION @ISA $ISCORE);
 BEGIN {
-    $VERSION = '0.00002';
+    $VERSION = '0.00003';
     $ISCORE  = 0;
     @ISA     = qw(Module::Install::Base);
 }
@@ -25,7 +25,7 @@ sub requires_any_moose {
     my $requires = $self->requires;
     if (! grep { $_->[0] eq 'Any::Moose' } @$requires ) {
         print "Adding Any::Moose to prerequisites...\n";
-        $self->requires('Any::Moose');
+        $self->requires('Any::Moose', 0.04);
     }
 
     $self->_any_moose_setup($prefer, $module, %args);
@@ -123,7 +123,7 @@ Specify the Mouse alternative's minimum version.
 
 As an example, the following would require MooseX::AttributeHelpers 0.13, and MouseX::AttributeHelpers as an optional dependency:
 
-    any_moose_requires 'X::AttributeHelpers' => (
+    requires_any_moose 'X::AttributeHelpers' => (
         prefer => 'Moose',
         moose => '0.13',
         mouse => '0.01'
